@@ -28,15 +28,16 @@ class Template extends Diafan
   new function __construct(&$diafan) {
     parent::__construct($diafan);
 
-
-
     Custom::inc('plugins/loader.php');
 
     $classLoader = new SplClassLoader('Twig', ABSOLUTE_PATH.Custom::path('plugins'));
     $classLoader->register();
 
     $loader = new Twig_Loader_Filesystem(ABSOLUTE_PATH);
-    $this->twig = new Twig_Environment($loader);
+    $this->twig = new Twig_Environment($loader, array(
+			'debug' => MOD_DEVELOPER,
+			'cache' => ABSOLUTE_PATH.'cache'
+		));
 
     //$classLoader->unregister();
   }
@@ -110,7 +111,6 @@ class Template extends Diafan
 
       return $text;
     }
-
 
     return '';
   }
