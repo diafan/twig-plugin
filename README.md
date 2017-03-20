@@ -5,10 +5,9 @@
 Распакуйте архив в корень вашего сайта или в папку текущей темы /custom/theme_name/
 
 ### Использование
-Как создавать шаблоны модулей для Diafan.CMS [читайте в документации](https://www.diafan.ru/dokument/full-manual/developers/architecture/module/view/), а мы рассмотрим пример создания шаблона блока новости.
-
 Шаблоны располагаются в папке *modules/имя модуля/twigs* и имеют название *modules/модуль/twigs/модуль.twig.шаблон.php*
 
+Как создавать шаблоны модулей для Diafan.CMS [читайте в документации](https://www.diafan.ru/dokument/full-manual/developers/architecture/module/view/), а мы рассмотрим пример создания шаблона блока новости.
 #### /modules/news/twigs/news.twig.show_block.php
 ```HTML
 <section class="block_news">
